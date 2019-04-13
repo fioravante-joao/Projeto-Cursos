@@ -3,3 +3,12 @@
     height: 300px;
     width: 600px;
 }
+
+/* deixando minha div pegando 100% do tamanho da tela e centralizando o formulário*/
+.page-center{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
