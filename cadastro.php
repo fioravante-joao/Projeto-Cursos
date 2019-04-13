@@ -28,6 +28,16 @@
 ?>
     <div class="page-center">
         <h2>Cadastre-se</h2>
+        <!-- verifica se a variavel cadastrou foi definida -->
+        <?php if (isset($cadastrou) && $cadastrou) : ?>
+            <divclass="alert alert-sucess" role="alert">
+                <span>Usuário cadastrado com sucesso.</span>
+            </div>
+        <?php elseif (isset($erro)) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $erro: ?>
+            </div>
+        <?php endif;?>
         <form action="cadastro.php" method="post" class="col-md-7">
             <div class="col-md-12">
                 <label for="inputNome">Nome</label>
