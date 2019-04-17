@@ -13,7 +13,7 @@
         //transforma o json em array associativo
         $arrayUsuarios = json_decode($usuariosJson, true);
 
-        //adicionando um novo usuario para op array
+        //adicionando um novo usuario para o array
         array_push($arrayUsuarios["usuarios"], $usuario);
 
         //transformando o array em json
@@ -26,4 +26,23 @@
         return $cadastrou;
     }
 
+        $nomeArquivo = "usuarios.json";
+
+        function logarUsuario($email, $senha){
+            global $nomeArquivo;
+
+            //pegando o conteudondo arquivo usuarios.jjson
+            $usuariosJson = file_get_contents($nomeArquivo);
+            //transformando o json em array associativo
+            $arrayUsuarios = json_decode($usuariosJson, true);
+            //verificando de o usuario existe no arquivo usuarios.json
+            foreach($arrayUsuarios["usuarios"] as $chave => $valor){
+                //verificando se o e-mail digitado é igual ao e-mail do json
+                if ($valor["email"] == $email && password_verify($senha, $valor["senha"])){
+                $logado = true;
+                break;
+            }
+        }
+        return $logado;
+    }
 ?>
