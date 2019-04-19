@@ -30,7 +30,7 @@
 
         function logarUsuario($email, $senha){
             global $nomeArquivo;
-
+            $nomeLogado = "";
             //pegando o conteudondo arquivo usuarios.jjson
             $usuariosJson = file_get_contents($nomeArquivo);
             //transformando o json em array associativo
@@ -39,10 +39,10 @@
             foreach($arrayUsuarios["usuarios"] as $chave => $valor){
                 //verificando se o e-mail digitado é igual ao e-mail do json
                 if ($valor["email"] == $email && password_verify($senha, $valor["senha"])){
-                $logado = true;
+                $nomeLogado = $valor["nome"];
                 break;
             }
         }
-        return $logado;
+        return $nomeLogado;
     }
 ?>

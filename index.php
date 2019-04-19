@@ -11,9 +11,6 @@
     
 ?>
 
-
-    
-
     <div class="container">
         <div class="row">
             <?php foreach ($cursos as $nomeCurso => $infosCurso) : ?>
