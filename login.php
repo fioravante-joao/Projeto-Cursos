@@ -1,6 +1,7 @@
 <?php
-    require "rec/funcoesLogin.php";
+    require "req/funcoesLogin.php";
     include "inc/head.php";
+    
    
     if ($_REQUEST){
         // pegando os valores dos inputs
