@@ -4,7 +4,7 @@
     include "inc/head.php";
     
    
-    if ($_REQUEST){
+    if ($_REQUEST)['email']) && $_REQUEST['email']){
         // pegando os valores dos inputs
         $email = $_REQUEST["email"];
         $senha = $_REQUEST["senha"];

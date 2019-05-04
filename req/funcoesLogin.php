@@ -23,6 +23,9 @@
     }
 
         function logarUsuario($email, $senha){
+
+            $infoLogado = false;
+
             try{
                 global $conexao;
 
